@@ -20,4 +20,10 @@ public class TestController {
         DateTimeFormatter dtf = DateTimeFormatter.BASIC_ISO_DATE;
         return new TestResponse("Hello world", LocalDateTime.now().format(dtf));
     }
+
+    @GetMapping("/test/ping")
+    public TestResponse getPing() {
+        DateTimeFormatter dtf = DateTimeFormatter.BASIC_ISO_DATE;
+        return new TestResponse("PONG", LocalDateTime.now().format(dtf));
+    }
 }
